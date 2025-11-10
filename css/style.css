@@ -17,7 +17,7 @@
   font-size: 18px;
   line-height: 1;         /* Keeps text vertically centered */
   position: relative;
-  top: 2px;               /* Fine-tune: lower text by 1–3px if needed */
+  top: 3px;               /* Fine-tune: lower text by 1–3px if needed */
 }
 :root{
   --midnight:#0D1B2A;
