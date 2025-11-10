@@ -1,3 +1,21 @@
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.brand img {
+  height: 36px; /* Adjust as needed */
+}
+
+.brand small {
+  color: var(--cyan);
+  opacity: 0.9;
+  white-space: nowrap; /* keeps the text on one line */
+  font-weight: 500;
+  font-size: 16px;
+}
 :root{
   --midnight:#0D1B2A;
   --cyan:#00C4FF;
