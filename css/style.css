@@ -1,3 +1,7 @@
+body {
+    background-color: #ffffff;   /* White background */
+    color: #0D1B2A;             /* Lucent.AI dark text color */
+}
 
 :root{
   --midnight:#0D1B2A;
