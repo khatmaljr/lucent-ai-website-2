@@ -1,0 +1,42 @@
+
+:root{
+  --midnight:#0D1B2A;
+  --cyan:#00C4FF;
+  --white:#FFFFFF;
+  --graphite:#2F3E46;
+  --silver:#D9E2EC;
+  --body:#E7EEF6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:#e6edf3;background:var(--midnight);}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1120px;margin:0 auto;padding:24px}
+.header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(6px);background:rgba(13,27,42,0.7);border-bottom:1px solid rgba(217,226,236,.12);z-index:20}
+.nav{display:flex;gap:20px;align-items:center;justify-content:flex-end}
+.brand{display:flex;align-items:flex-start;gap:10px}
+.brand small{color:var(--cyan);opacity:.9}
+.logo{height:22px}
+.hero{padding:80px 0;background:radial-gradient(1200px 500px at 50% -150px, rgba(0,196,255,.20), transparent 70%),linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));}
+h1,h2,h3{color:#eaf2fb;margin:0 0 12px}
+h1{font-size:44px;line-height:1.1}
+h2{font-size:32px}
+p{color:#c9d6e7;line-height:1.65}
+.cta{display:inline-flex;gap:10px;align-items:center;padding:12px 18px;border-radius:12px;border:1px solid rgba(217,226,236,.16);background:rgba(47,62,70,.25);color:#fff}
+.cta.primary{background:linear-gradient(180deg, rgba(0,196,255,.18), rgba(0,196,255,.08));border-color:rgba(0,196,255,.35)}
+.grid{display:grid;gap:20px}
+.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{border:1px solid rgba(217,226,236,.14);border-radius:16px;padding:18px;background:rgba(13,27,42,.55)}
+.section{padding:60px 0}
+.footer{border-top:1px solid rgba(217,226,236,.12);padding:24px 0;background:rgba(13,27,42,.7)}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(0,196,255,.12);color:var(--cyan);border:1px solid rgba(0,196,255,.35);font-weight:600}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap}
+.center{text-align:center}
+img.icon{height:80px;opacity:.2;filter:grayscale(100%)}
+.note{font-size:12px;color:#a8b6c9;opacity:.9}
+blockquote{margin:0;padding:0.2rem 0;color:#eaf2fb;font-style:italic}
+/* Responsive */
+@media (max-width:860px){
+  h1{font-size:34px}
+  .grid.cols-3{grid-template-columns:1fr}
+}
