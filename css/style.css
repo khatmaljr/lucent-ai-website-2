@@ -1,24 +1,4 @@
-.brand {
-  display: flex;
-  align-items: center;    /* Centers vertically */
-  gap: 12px;              /* Adjust spacing between logo and text */
-}
 
-.brand img {
-  height: 40px;           /* Adjust if needed */
-  vertical-align: middle; /* Ensures logo aligns nicely with text */
-}
-
-.brand small {
-  color: var(--cyan);
-  opacity: 0.9;
-  white-space: nowrap;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1;         /* Keeps text vertically centered */
-  position: relative;
-  top: 3px;               /* Fine-tune: lower text by 1–3px if needed */
-}
 :root{
   --midnight:#0D1B2A;
   --cyan:#00C4FF;
