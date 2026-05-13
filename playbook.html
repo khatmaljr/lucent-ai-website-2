@@ -1,56 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lucent.AI</title>
-<link rel="icon" href="images/LucentAI Icon.png" type="image/png"/>
-<link rel="stylesheet" href="css/style.css"/>
-<meta name="theme-color" content="#0D1B2A"/>
-<meta name="description" content="Human-led. AI-enabled. Lucent.AI helps mid-sized businesses build flow with data and intelligent automation."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The AI-Ready Enterprise Transformation Playbook from Lucent.AI.">
+<meta name="theme-color" content="#0C1628">
+<title>Playbook — Lucent.AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0C1628;--ink-2:#1A2E4A;--ink-3:#2B4268;--steel:#4A6685;--mist:#8FA5BE;--pale:#D4DFE9;--white:#FAFCFE;--gold:#B8965A;--gold-lt:#D4AF78;--rule:rgba(180,200,220,0.22);--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--sans);background:var(--ink);color:var(--white);font-size:16px;line-height:1.7;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.03;pointer-events:none;z-index:9999;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 6vw;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(12,22,40,0.95),transparent);backdrop-filter:blur(12px);}
+.nav-logo{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2.4rem;list-style:none;}
+.nav-links a{font-size:0.8rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--white);}
+.page-hero{padding:16vh 6vw 8vh;background:linear-gradient(160deg,#0C1628 0%,#111F35 100%);position:relative;overflow:hidden;}
+.page-hero::after{content:'';position:absolute;right:-5%;top:10%;width:45%;height:80%;background:radial-gradient(ellipse at center,rgba(43,66,104,0.4) 0%,transparent 70%);}
+.page-hero-label{font-size:0.68rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;}
+.page-hero-label::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold);}
+.page-hero h1{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:500;line-height:1.1;color:var(--white);max-width:700px;margin-bottom:1.5rem;}
+.page-hero h1 em{font-style:italic;color:var(--gold-lt);}
+.page-hero p{font-size:1.05rem;font-weight:300;color:var(--mist);max-width:520px;line-height:1.8;}
+section{padding:6rem 6vw;}
+.section-label{font-size:0.68rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem;}
+.section-label::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold);}
+.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:500;line-height:1.18;color:var(--white);margin-bottom:1.2rem;}
+.btn-primary{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 2rem;background:var(--gold);color:var(--ink);font-family:var(--sans);font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,transform 0.2s;}
+.btn-primary:hover{background:var(--gold-lt);transform:translateY(-2px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 2rem;border:1px solid rgba(180,200,220,0.3);color:var(--pale);font-family:var(--sans);font-size:0.78rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:border-color 0.25s,color 0.25s,transform 0.2s;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.download-section{background:var(--ink-2);}
+.download-card{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3.5rem;border:1px solid var(--rule);padding:3.5rem;}
+.download-card-left h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:500;line-height:1.15;color:var(--white);margin-bottom:1.2rem;}
+.download-card-left h2 em{font-style:italic;color:var(--gold-lt);}
+.download-card-left p{font-size:0.95rem;font-weight:300;color:var(--mist);line-height:1.8;margin-bottom:2rem;}
+.download-card-right{border-left:1px solid var(--rule);padding-left:4rem;}
+.download-card-right h3{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--mist);margin-bottom:1.5rem;}
+.inside-list{list-style:none;}
+.inside-list li{display:flex;gap:0.8rem;align-items:flex-start;padding:0.7rem 0;border-bottom:1px solid var(--rule);font-size:0.88rem;font-weight:300;color:var(--pale);line-height:1.55;}
+.inside-list li::before{content:'→';color:var(--gold);flex-shrink:0;font-size:0.8rem;margin-top:0.1rem;}
+.how-to{background:var(--ink);}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+.how-card{padding:2.4rem;border:1px solid var(--rule);position:relative;}
+.how-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.4s;}
+.how-card:hover::before{transform:scaleX(1);}
+.how-num{font-family:var(--serif);font-size:2rem;font-weight:400;color:rgba(184,150,90,0.25);margin-bottom:1rem;line-height:1;}
+.how-card h3{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:0.7rem;}
+.how-card p{font-size:0.87rem;font-weight:300;color:var(--mist);line-height:1.7;}
+.when{background:var(--ink-2);}
+.when-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);margin-top:3.5rem;}
+.when-item{padding:2rem 2.4rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);font-size:0.92rem;font-weight:300;color:var(--pale);line-height:1.6;display:flex;gap:1rem;align-items:flex-start;transition:background 0.25s;}
+.when-item:nth-child(even){border-right:none;}
+.when-item:nth-last-child(-n+2){border-bottom:none;}
+.when-item:hover{background:rgba(184,150,90,0.04);}
+.when-item::before{content:'—';color:var(--gold);flex-shrink:0;}
+.cta-strip{background:var(--ink-3);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:5rem 6vw;display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;}
+.cta-strip h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:var(--white);margin-bottom:0.6rem;}
+.cta-strip p{font-size:0.95rem;font-weight:300;color:var(--mist);}
+footer{background:var(--ink);border-top:1px solid var(--rule);padding:3rem 6vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.footer-logo{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--mist);text-decoration:none;}
+.footer-logo span{color:var(--gold);}
+.footer-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
+.footer-links a{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--steel);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-copy{font-size:0.75rem;color:var(--steel);}
+.fade-in-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-in-up.visible{opacity:1;transform:translateY(0);}
+@media(max-width:900px){.download-card{grid-template-columns:1fr;gap:3rem;}.download-card-right{border-left:none;border-top:1px solid var(--rule);padding-left:0;padding-top:3rem;}.how-grid{grid-template-columns:1fr;}.when-grid{grid-template-columns:1fr;}.when-item:nth-child(even){border-right:1px solid var(--rule);}.cta-strip{flex-direction:column;align-items:flex-start;}}
+</style>
 </head>
 <body>
-<header class="header">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <div class="brand">
-      <img class="logo" src="images/LucentAI Logo 2.png" alt="Lucent.AI"/>
-      <small>Human-led. AI-enabled.</small>
+<nav>
+  <a href="index.html" class="nav-logo">Lucent<span>.</span>AI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="playbook.html" class="active">Playbook</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <p class="page-hero-label">The Playbook</p>
+  <h1>The AI-Ready Enterprise<br><em>Transformation Playbook</em></h1>
+  <p>A practical roadmap to improve service, cost, cash, and growth — by fixing process, coordination, and execution first.</p>
+</div>
+<section class="download-section">
+  <div class="download-card fade-in-up">
+    <div class="download-card-left">
+      <h2>Your roadmap to<br><em>measurable improvement.</em></h2>
+      <p>The playbook walks through Lucent's four-stage transformation model, the four pillars of AI-readiness, and where most businesses need to start. Practical, not theoretical — designed to be used, not filed.</p>
+      <a href="https://drive.google.com/file/d/1O-gR5_kYK6eGWsDwL2Ydhc7F3G8_48Q4/view?usp=sharing" class="btn-primary" target="_blank" rel="noopener">Download the Playbook (PDF) &#x2192;</a>
     </div>
-    <nav class="nav">
-      <a href="index.html" >Home</a>
-      <a href="about.html" >About</a>
-      <a href="playbook.html" style="text-decoration:underline">Playbook</a>
-      <a href="assessment.html" >Assessment</a>
-      <a href="contact.html" >Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <span class="badge">PLAYBOOK</span>
-    <h1>The AI-Ready Enterprise Transformation Playbook</h1>
-    <p>Your roadmap to simplifying workflows, connecting data, and automating what matters most.</p>
-    <div class="btnrow">
-  <a href="https://drive.google.com/file/d/1O-gR5_kYK6eGWsDwL2Ydhc7F3G8_48Q4/view?usp=sharing" class="btn-primary">
-  Download the AI-Ready Playbook (PDF)
-</a>
+    <div class="download-card-right">
+      <h3>What's inside</h3>
+      <ul class="inside-list">
+        <li>Why most businesses struggle to modernise — and what to do instead</li>
+        <li>The Lucent approach: fix the flow before scaling the tech</li>
+        <li>Four-stage model: Diagnose, Redesign, Pilot, Embed and Scale</li>
+        <li>Four pillars of AI-readiness: Operations, Customers, People, Technology</li>
+        <li>What AI-ready really means — and the right order to build toward it</li>
+        <li>Where Lucent creates value first — real operating problems</li>
+        <li>What clients should expect to improve — operational and strategic outcomes</li>
+        <li>How to work with Lucent: engagement formats and how to start</li>
+      </ul>
     </div>
   </div>
 </section>
-<section class="section">
-  <div class="container grid cols-3">
-    <div class="card"><h3>Current State Overview</h3><p>Understand where you stand today.</p></div>
-    <div class="card"><h3>Practical Steps</h3><p>Simple, doable actions for immediate gains.</p></div>
-    <div class="card"><h3>Metrics &amp; Flow Gains</h3><p>How to measure and sustain progress.</p></div>
+<section class="how-to">
+  <p class="section-label">How to use it</p>
+  <h2 class="section-title">Three ways to put<br>the playbook to work.</h2>
+  <div class="how-grid fade-in-up">
+    <div class="how-card">
+      <div class="how-num">01</div>
+      <h3>Self-assess your current state</h3>
+      <p>Use the trigger signals and pain-point framework to map where your business experiences the most friction. The most useful outcome is clarity about where to start.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-num">02</div>
+      <h3>Share it with your leadership team</h3>
+      <p>Written to be shared with a COO, CFO, or operations head. Use it to open a conversation about whether the business is ready to improve execution before adding more technology.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-num">03</div>
+      <h3>Use it as a starting point for Lucent</h3>
+      <p>The playbook is a commercial document, not just thought leadership. If something resonates, book a diagnostic conversation — always direct and practical, not a sales process.</p>
+    </div>
   </div>
 </section>
-
-<footer class="footer">
-  <div class="container" style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap">
-    <div>Lucent.AI © 2025 · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="contact.html">Contact</a></div>
-    <div class="note">We do not collect personal data on this site.</div>
+<section class="when">
+  <p class="section-label">When to call Lucent</p>
+  <h2 class="section-title">The playbook is useful on its own.<br>A conversation is better when these apply.</h2>
+  <div class="when-grid fade-in-up">
+    <div class="when-item">Growth is happening, but execution is becoming inconsistent and harder to manage</div>
+    <div class="when-item">Leaders are spending too much time in operational detail rather than on growth</div>
+    <div class="when-item">Work moves slowly between teams and handoffs are regularly missed</div>
+    <div class="when-item">ERP or CRM exists but execution still runs on spreadsheets and individual memory</div>
+    <div class="when-item">AI adoption is being discussed, but operational foundations are not yet stable</div>
+    <div class="when-item">Service levels or execution quality are under pressure as the business scales</div>
   </div>
+</section>
+<div class="cta-strip fade-in-up">
+  <div>
+    <h2>Ready to move from<br>playbook to action?</h2>
+    <p>Book a diagnostic conversation — direct, practical, no sales process.</p>
+  </div>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="contact.html" class="btn-primary">Book a conversation</a>
+    <a href="about.html" class="btn-ghost">About Lucent</a>
+  </div>
+</div>
+<footer>
+  <a href="index.html" class="footer-logo">Lucent<span>.</span>AI</a>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="playbook.html">Playbook</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">Lucent.AI &copy; 2025 &nbsp;&middot;&nbsp; We do not collect personal data on this site</p>
 </footer>
+<script>
+const observer=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.12});
+document.querySelectorAll('.fade-in-up').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>

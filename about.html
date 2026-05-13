@@ -1,49 +1,240 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lucent.AI</title>
-<link rel="icon" href="images/LucentAI Icon.png" type="image/png"/>
-<link rel="stylesheet" href="css/style.css"/>
-<meta name="theme-color" content="#0D1B2A"/>
-<meta name="description" content="Human-led. AI-enabled. Lucent.AI helps mid-sized businesses build flow with data and intelligent automation."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Lucent.AI — Operator-led. Practical. Human-led and AI-enabled transformation advisory.">
+<meta name="theme-color" content="#0C1628">
+<title>About — Lucent.AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#0C1628;--ink-2:#1A2E4A;--ink-3:#2B4268;
+    --steel:#4A6685;--mist:#8FA5BE;--pale:#D4DFE9;--ice:#EEF3F8;--white:#FAFCFE;
+    --gold:#B8965A;--gold-lt:#D4AF78;
+    --rule:rgba(180,200,220,0.22);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'DM Sans',system-ui,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--sans);background:var(--ink);color:var(--white);font-size:16px;line-height:1.7;overflow-x:hidden;}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.03;pointer-events:none;z-index:9999;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 6vw;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(12,22,40,0.95),transparent);backdrop-filter:blur(12px);}
+  .nav-logo{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--white);text-decoration:none;}
+  .nav-logo span{color:var(--gold);}
+  .nav-links{display:flex;gap:2.4rem;list-style:none;}
+  .nav-links a{font-size:0.8rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--white);}
+
+  .page-hero{padding:16vh 6vw 8vh;background:linear-gradient(160deg,#0C1628 0%,#111F35 100%);position:relative;overflow:hidden;}
+  .page-hero::after{content:'';position:absolute;right:-5%;top:10%;width:45%;height:80%;background:radial-gradient(ellipse at center,rgba(43,66,104,0.4) 0%,transparent 70%);}
+  .page-hero-label{font-size:0.68rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;}
+  .page-hero-label::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold);}
+  .page-hero h1{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:500;line-height:1.1;color:var(--white);max-width:700px;margin-bottom:1.5rem;}
+  .page-hero h1 em{font-style:italic;color:var(--gold-lt);}
+  .page-hero p{font-size:1.05rem;font-weight:300;color:var(--mist);max-width:520px;line-height:1.8;}
+
+  section{padding:6rem 6vw;}
+  .section-label{font-size:0.68rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem;}
+  .section-label::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold);}
+  .section-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:500;line-height:1.18;color:var(--white);margin-bottom:1.2rem;}
+
+  /* Founder block */
+  .founder{background:var(--ink-2);}
+  .founder-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;margin-top:3rem;}
+  .founder-portrait{background:var(--ink-3);border:1px solid var(--rule);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;}
+  .founder-portrait-inner{text-align:center;padding:2rem;}
+  .founder-portrait-inner .initial{font-family:var(--serif);font-size:6rem;font-weight:400;color:rgba(184,150,90,0.3);line-height:1;}
+  .founder-portrait-inner p{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--steel);margin-top:0.5rem;}
+  .founder-content h2{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:500;color:var(--white);margin-bottom:0.4rem;}
+  .founder-content .founder-title{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+  .founder-content p{font-size:0.95rem;font-weight:300;color:var(--mist);line-height:1.8;margin-bottom:1.2rem;}
+  .founder-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;border-top:1px solid var(--rule);padding-top:2.5rem;}
+  .stat-item{}
+  .stat-num{font-family:var(--serif);font-size:2.2rem;font-weight:500;color:var(--gold);line-height:1;}
+  .stat-label{font-size:0.75rem;font-weight:300;color:var(--steel);margin-top:0.3rem;letter-spacing:0.06em;}
+
+  /* Principles */
+  .principles{background:var(--ink);}
+  .principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:3.5rem;border:1px solid var(--rule);}
+  .principle-card{background:var(--ink);padding:2.8rem 2.2rem;}
+  .principle-num{font-family:var(--serif);font-size:2.5rem;font-weight:400;color:rgba(184,150,90,0.2);margin-bottom:1rem;line-height:1;}
+  .principle-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:0.8rem;}
+  .principle-card p{font-size:0.88rem;font-weight:300;color:var(--mist);line-height:1.7;}
+
+  /* Why different */
+  .different{background:var(--ink-2);}
+  .different-list{margin-top:3rem;}
+  .different-item{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--rule);align-items:start;}
+  .different-item:first-child{border-top:1px solid var(--rule);}
+  .diff-label{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);white-space:nowrap;padding-top:0.2rem;}
+  .diff-content h3{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--white);margin-bottom:0.4rem;}
+  .diff-content p{font-size:0.9rem;font-weight:300;color:var(--mist);line-height:1.7;}
+
+  /* CTA */
+  .cta-strip{background:var(--ink-3);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:5rem 6vw;display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;}
+  .cta-strip h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:var(--white);margin-bottom:0.6rem;}
+  .cta-strip p{font-size:0.95rem;font-weight:300;color:var(--mist);}
+  .btn-primary{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 2rem;background:var(--gold);color:var(--ink);font-family:var(--sans);font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.25s,transform 0.2s;}
+  .btn-primary:hover{background:var(--gold-lt);transform:translateY(-2px);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 2rem;border:1px solid rgba(180,200,220,0.3);color:var(--pale);font-family:var(--sans);font-size:0.78rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:border-color 0.25s,color 0.25s,transform 0.2s;}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+
+  footer{background:var(--ink);border-top:1px solid var(--rule);padding:3rem 6vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+  .footer-logo{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--mist);text-decoration:none;}
+  .footer-logo span{color:var(--gold);}
+  .footer-links{display:flex;gap:2rem;list-style:none;flex-wrap:wrap;}
+  .footer-links a{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--steel);text-decoration:none;transition:color 0.2s;}
+  .footer-links a:hover{color:var(--gold);}
+  .footer-copy{font-size:0.75rem;color:var(--steel);}
+
+  .fade-in-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+  .fade-in-up.visible{opacity:1;transform:translateY(0);}
+
+  @media(max-width:900px){
+    .founder-grid{grid-template-columns:1fr;gap:3rem;}
+    .founder-portrait{aspect-ratio:auto;padding:3rem;}
+    .principles-grid{grid-template-columns:1fr;}
+    .cta-strip{flex-direction:column;align-items:flex-start;}
+  }
+</style>
 </head>
 <body>
-<header class="header">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <div class="brand">
-      <img class="logo" src="images/LucentAI Logo 2.png" alt="Lucent.AI"/>
-      <small>Human-led. AI-enabled.</small>
+<nav>
+  <a href="index.html" class="nav-logo">Lucent<span>.</span>AI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="playbook.html">Playbook</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-label">About Lucent.AI</p>
+  <h1>Operator-led.<br><em>Practical, not theatrical.</em></h1>
+  <p>Lucent.AI is a transformation advisory built from real operating experience — not consulting theory. We start with business reality, not technology.</p>
+</div>
+
+<section class="founder">
+  <p class="section-label">The founder</p>
+  <div class="founder-grid fade-in-up">
+    <div class="founder-portrait">
+      <div class="founder-portrait-inner">
+        <div class="initial">RA</div>
+        <p>Rohit Anand</p>
+      </div>
     </div>
-    <nav class="nav">
-      <a href="index.html" >Home</a>
-      <a href="about.html" style="text-decoration:underline">About</a>
-      <a href="playbook.html" >Playbook</a>
-      <a href="contact.html" >Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <h1>About Lucent.AI</h1>
-    <p>Human-led. AI-enabled. We build flow with process excellence, connected data, and intelligent automation.</p>
+    <div class="founder-content">
+      <h2>Rohit Anand</h2>
+      <p class="founder-title">Founder &amp; Principal Advisor, Lucent.AI</p>
+      <p>Rohit brings over 25 years of global experience in business excellence, operations transformation, and digital operations. He has worked across technology, supply chain, and multi-site operating environments — in the room where execution actually happens, not just in the advisory layer above it.</p>
+      <p>Lucent.AI is built on a simple conviction: most businesses that want to benefit from AI first need to fix how work flows across the organisation. Technology follows clear thinking — not the other way around.</p>
+      <p>The work Lucent does is practical, staged, and designed to produce visible improvement at each step. The goal is never transformation theatre. The goal is measurable business improvement that the client can operate independently.</p>
+      <div class="founder-stats">
+        <div class="stat-item">
+          <div class="stat-num">25+</div>
+          <div class="stat-label">Years in operations &amp; transformation</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Stage transformation model</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">Global</div>
+          <div class="stat-label">Operating experience across sectors</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<section class="section">
-  <div class="container grid cols-3">
-    <div class="card"><h3>Process Excellence</h3><p>Lean, Six Sigma, and end-to-end value-stream thinking.</p></div>
-    <div class="card"><h3>Data Foundations</h3><p>Unified models, governed access, and analytics-ready pipelines.</p></div>
-    <div class="card"><h3>Automation &amp; AI</h3><p>From pilots to scaled impact with measurable ROI.</p></div>
+
+<section class="principles">
+  <p class="section-label">How we think</p>
+  <h2 class="section-title">Three principles that<br>govern every engagement.</h2>
+  <div class="principles-grid fade-in-up">
+    <div class="principle-card">
+      <div class="principle-num">01</div>
+      <h3>Human-led</h3>
+      <p>Business judgment and operating discipline come first. Technology follows clear thinking, not the other way around. We do not start with tools.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">02</div>
+      <h3>AI-enabled</h3>
+      <p>Technology is applied where it genuinely improves flow, visibility, and productivity — not as a default, not as a differentiator, not before the business is ready for it.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">03</div>
+      <h3>Stage-based</h3>
+      <p>Each phase produces a tangible output the client can use immediately. Progress is visible, not theoretical. No stage exists just to set up the next invoice.</p>
+    </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container" style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap">
-    <div>Lucent.AI © 2025 · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="contact.html">Contact</a></div>
-    <div class="note">We do not collect personal data on this site.</div>
+<section class="different">
+  <p class="section-label">Why Lucent</p>
+  <h2 class="section-title">What makes this<br>engagement different.</h2>
+  <div class="different-list fade-in-up">
+    <div class="different-item">
+      <span class="diff-label">Operator-led</span>
+      <div class="diff-content">
+        <h3>Built from real operating experience</h3>
+        <p>Lucent is founded by someone who has been in the room where execution happens — not just in the advisory layer above it. The work reflects 25+ years of what actually works in live organisations.</p>
+      </div>
+    </div>
+    <div class="different-item">
+      <span class="diff-label">Practical</span>
+      <div class="diff-content">
+        <h3>Focused on what can be implemented</h3>
+        <p>Every engagement is designed to produce something usable — not just a recommendation, not just a framework. The measure of success is whether the business is working better, not whether the deck looked good.</p>
+      </div>
+    </div>
+    <div class="different-item">
+      <span class="diff-label">Staged</span>
+      <div class="diff-content">
+        <h3>No big-bang transformation</h3>
+        <p>Lucent works in four practical stages — Diagnose, Redesign, Pilot, Embed &amp; Scale. Each stage stands on its own and produces visible improvement. Clients can start with a single diagnostic and decide how far to go from there.</p>
+      </div>
+    </div>
+    <div class="different-item">
+      <span class="diff-label">Founder-led</span>
+      <div class="diff-content">
+        <h3>Direct engagement, not delegation</h3>
+        <p>Lucent is a boutique advisory. Clients engage directly with Rohit Anand — not with a junior team assembled after the sale. The relationship is direct, and the accountability is direct.</p>
+      </div>
+    </div>
   </div>
+</section>
+
+<div class="cta-strip fade-in-up">
+  <div>
+    <h2>Ready to have a real conversation?</h2>
+    <p>Book a diagnostic conversation or download the playbook to start on your own.</p>
+  </div>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="contact.html" class="btn-primary">Book a conversation</a>
+    <a href="playbook.html" class="btn-ghost">Download playbook</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="footer-logo">Lucent<span>.</span>AI</a>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="playbook.html">Playbook</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">Lucent.AI © 2025 &nbsp;·&nbsp; We do not collect personal data on this site</p>
 </footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
+  }, {threshold:0.12});
+  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
